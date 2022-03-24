@@ -2,7 +2,7 @@ import React from "react";
 import {useNavigate } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import { useUserAuth } from "../context/UserAuthContext";
-
+import Hero from "../components/Hero";
 const Landing = () => {
   const { user } = useUserAuth();
 
@@ -16,9 +16,10 @@ const Landing = () => {
 
   return (
     <div className='App'>
-       <Button variant="primary" onClick={loginpage}>
+      <Hero />
+       {/* <Button variant="primary" onClick={loginpage}>
               Log In
-            </Button>
+            </Button> */}
     </div>
   );
 }

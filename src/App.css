@@ -1,11 +1,144 @@
-body {
-  background-color: #fafafa;
-  display: flex;
-  justify-content: center;
-  align-content: center;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700&display=swap");
+.App {
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden !important;
+}
+.t-container {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.logo {
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+}
+.nav-items {
+  font-family: "Inter";
+  font-weight: 400;
+  color: #000;
+}
+.button {
+  padding: 10px 35px !important;
+  background: linear-gradient(90deg, #ff912c 0%, #f33759 131.35%);
+  box-shadow: 0px 5px 15px rgba(254, 125, 53, 0.8);
+  border-radius: 10px;
+  border: none !important;
+}
+.row{
+  --bs-gutter-x: 0 !important;
+}
+.hero-text {
+  height: 65vh;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 58px;
+  font-style: italic;
+
+  color: #455a64;
+}
+.hero-right {
+  padding-right: 0px !important;
+}
+.hero-img {
+  margin-top: 30px;
   width: 100%;
-  align-items: center;
-  height: 100vh;
+  padding-right: 0px !important;
+}
+.gradient-text {
+  text-align: left;
+  font-family: "Inter";
+  font-style: italic;
+  background: linear-gradient(
+    102.28deg,
+    #fe7d35 8.62%,
+    #fe7d35 8.62%,
+    #f33759 47.02%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.blob {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  margin-top: -40px;
+}
+.triangle {
+  position: absolute;
+  width: 73.37px;
+  height: 63.04px;
+  left: 496px;
+  top: 636px;
+  margin-top: -140px;
+  -webkit-animation: animationFramesOne 12s linear infinite;
+	animation: animationFramesOne 12s linear infinite;
+	z-index: 1;
+  
+}
+
+.triangle1 {
+  position: absolute;
+  width: 50px;
+  height: 43.04px;
+  left: 40%;
+  top: 96px;
+-webkit-animation: animationFramesOne 15s linear infinite;
+	animation: animationFramesOne 15s linear infinite;
+	z-index: 1;
+}
+@-webkit-keyframes animationFramesOne {
+	0% {
+		-webkit-transform: translate(0px, 0px) rotate(0deg);
+		transform: translate(0px, 0px) rotate(0deg);
+	}
+	20% {
+		-webkit-transform: translate(73px, -1px) rotate(36deg);
+		transform: translate(73px, -1px) rotate(36deg);
+	}
+	40% {
+		-webkit-transform: translate(141px, 72px) rotate(72deg);
+		transform: translate(141px, 72px) rotate(72deg);
+	}
+	60% {
+		-webkit-transform: translate(83px, 122px) rotate(108deg);
+		transform: translate(83px, 122px) rotate(108deg);
+	}
+	80% {
+		-webkit-transform: translate(-40px, 72px) rotate(144deg);
+		transform: translate(-40px, 72px) rotate(144deg);
+	}
+	100% {
+		-webkit-transform: translate(0px, 0px) rotate(0deg);
+		transform: translate(0px, 0px) rotate(0deg);
+	}
+}
+@keyframes animationFramesOne {
+	0% {
+		-webkit-transform: translate(0px, 0px) rotate(0deg);
+		transform: translate(0px, 0px) rotate(0deg);
+	}
+	20% {
+		-webkit-transform: translate(73px, -1px) rotate(36deg);
+		transform: translate(73px, -1px) rotate(36deg);
+	}
+	40% {
+		-webkit-transform: translate(141px, 72px) rotate(72deg);
+		transform: translate(141px, 72px) rotate(72deg);
+	}
+	60% {
+		-webkit-transform: translate(83px, 122px) rotate(108deg);
+		transform: translate(83px, 122px) rotate(108deg);
+	}
+	80% {
+		-webkit-transform: translate(-40px, 72px) rotate(144deg);
+		transform: translate(-40px, 72px) rotate(144deg);
+	}
+	100% {
+		-webkit-transform: translate(0px, 0px) rotate(0deg);
+		transform: translate(0px, 0px) rotate(0deg);
+	}
 }
 
 .box {

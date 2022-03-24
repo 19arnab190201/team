@@ -1,4 +1,4 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./components/Home";
@@ -10,7 +10,6 @@ import { UserAuthContextProvider } from "./context/UserAuthContext";
 
 function App() {
   return (
-    <Container style={{ width: "400px" }}>
       <Row>
         <Col>
           <UserAuthContextProvider>
@@ -30,7 +29,6 @@ function App() {
           </UserAuthContextProvider>
         </Col>
       </Row>
-    </Container>
   );
 }
 
