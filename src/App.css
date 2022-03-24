@@ -157,3 +157,23 @@
   width: 40px !important;
   height: 38px !important;
 }
+.card-container{
+  height: 60vh;
+  width: 400px;
+  border: 2px solid  #ff912c ;
+  margin: auto;
+  margin-top: 60px;
+  border-radius: 10px;
+   /* box-shadow: 0px 5px 15px rgba(254, 125, 53, 0.8);  */  
+}
+.card-container h2{
+  color: #fe7d35;
+}
+
+.log{
+   padding: 10px 35px !important;
+  background: linear-gradient(90deg, #ff912c 0%, #f33759 131.35%);
+  box-shadow: 0px 5px 15px rgba(254, 125, 53, 0.8);
+  border-radius: 10px;
+  border: none !important;
+}

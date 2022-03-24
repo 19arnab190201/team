@@ -34,9 +34,9 @@ const Login = () => {
   };
 
   return (
-    <>
-      <div className="p-4 box">
-        <h2 className="mb-3">Firebase Auth Login</h2>
+    <>    
+      <div className="p-4 card-container">
+        <h2 className="mb-3 text-center">LOGIN</h2>
         {error && <Alert variant="danger">{error}</Alert>}
         <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -56,7 +56,7 @@ const Login = () => {
           </Form.Group>
 
           <div className="d-grid gap-2">
-            <Button variant="primary" type="Submit">
+            <Button className="log" type="Submit">
               Log In
             </Button>
           </div>
@@ -69,10 +69,11 @@ const Login = () => {
             onClick={handleGoogleSignIn}
           />
         </div>
-      </div>
-      <div className="p-4 box mt-3 text-center">
+     
+      <div className="p-4  mt-3 text-center">
         Don't have an account? <Link to="/signup">Sign up</Link>
       </div>
+       </div>
     </>
   );
 };
