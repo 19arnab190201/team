@@ -20,17 +20,7 @@ const AppNavbar = () => {
         <Navbar.Toggle aria-controls='responsive-navbar-nav' />
         <Navbar.Collapse id='responsive-navbar-nav'>
           <Nav className='d-flex  justify-content-end w-100 nav-items'>
-            <Link to='./Explore'>
-              {" "}
-              <Nav.Link className='px-1' href='#explore'>
-                Explore Projects{" "}
-              </Nav.Link>
-            </Link>
-            <Link to='./Host'>
-              <Nav.Link className='px-5' eventKey={2} href='#host-projects'>
-                Host Projects
-              </Nav.Link>
-            </Link>
+         
             <Button className='button' onClick={loginpage}>Login</Button>{" "}
           </Nav>
         </Navbar.Collapse>
