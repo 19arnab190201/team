@@ -7,17 +7,23 @@ import { doc, onSnapshot } from "firebase/firestore";
 import {db} from '../firebase'
 const Home = () => {
   const [userDetails, setUserDetails] = useState(null);
-  const { logOut, userData } = useUserAuth();
+  const { logOut, userData, getProjects } = useUserAuth();
   const navigate = useNavigate();
   useEffect(() => {
     if (userData.uid) {
-    const unsub = onSnapshot(doc(db, "USERS", userData.uid), (doc) => {
+      const unsub = onSnapshot(doc(db, "USERS", userData.uid), (doc) => {
       setUserDetails(doc.data());
       unsub()  
   });
 }
   }, [userData]);
+
  
+    if(userDetails){
+      getProjects(userDetails.intrests);
+    }
+
+
  let curDate = new Date();
  curDate = curDate.getHours();
 let greeting = '';
