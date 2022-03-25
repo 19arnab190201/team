@@ -164,7 +164,7 @@
   margin: auto;
   margin-top: 60px;
   border-radius: 10px;
-   /* box-shadow: 0px 5px 15px rgba(254, 125, 53, 0.8);  */  
+  box-shadow: 0px 5px 15px rgba(254, 123, 53, 0.37);
 }
 .card-container h2{
   color: #fe7d35;
@@ -176,4 +176,17 @@
   box-shadow: 0px 5px 15px rgba(254, 125, 53, 0.8);
   border-radius: 10px;
   border: none !important;
+}
+.proj{
+  border:2px solid #fe7d35;
+  background-color: #fff;
+  color:#fe7d35;
+  padding: 8px 25px !important;
+  border-radius: 10px;
+}
+.proj:hover{
+  color:#fff;
+  background: #fe7d35;
+  box-shadow: 0px 5px 15px rgba(254, 125, 53, 0.8);  
+  border:2px solid #fe7d35;
 }

@@ -6,6 +6,7 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Landing from "./components/Landing";
 import ProtectedRoute from "./components/ProtectedRoute";
+import HostProject from "./components/HostProject.js";
 import { UserAuthContextProvider } from "./context/UserAuthContext";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
               <Route path="/" element={<Landing />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
+              <Route path="/hostproject" element={<HostProject />} />
             </Routes>
           </UserAuthContextProvider>
         </Col>

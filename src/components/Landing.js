@@ -4,10 +4,10 @@ import { Button } from "react-bootstrap";
 import { useUserAuth } from "../context/UserAuthContext";
 import Hero from "../components/Hero";
 const Landing = () => {
-  const { user } = useUserAuth();
+  const { userData } = useUserAuth();
 
   const navigate = useNavigate();
-  if (user) {
+  if (userData) {
     navigate("/home"); ;
   }
   const loginpage = async (e) => {
