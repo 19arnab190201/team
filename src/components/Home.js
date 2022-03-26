@@ -1,13 +1,17 @@
 import React,{useState,useEffect} from "react";
+import logo from '../assets/logo.png';
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router";
 import { useUserAuth } from "../context/UserAuthContext";
-
-import { doc, onSnapshot } from "firebase/firestore";
+import CardComp from "./CardComp";
+import { doc, onSnapshot, collection,query, where} from "firebase/firestore";
 import {db} from '../firebase'
 const Home = () => {
+
   const [userDetails, setUserDetails] = useState(null);
-  const { logOut, userData, getProjects } = useUserAuth();
+  const { logOut, userData } = useUserAuth();
+  const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
   useEffect(() => {
     if (userData.uid) {
@@ -17,12 +21,28 @@ const Home = () => {
   });
 }
   }, [userData]);
+  
+  useEffect(() => {
+    if (userDetails) {
+      console.log(userDetails.intrests);
+      if(userDetails.intrests){
+        setProjects([]);
+        for (let index = 0; index < userDetails.intrests.length; index++)
+        {
+          const q = query(collection(db, "PROJECTS"), where("category", "==", userDetails.intrests[index]));
+          const unsubscribe = onSnapshot(q, (snapshot) => {
+            snapshot.docChanges().forEach((pro) => {
+              console.log("PRO: ", pro.doc.data());
+              setProjects((prev) => [...prev, pro.doc.data()]);
+            });
+          });
+        }
+        setLoading(false);
+      }
+    }
+  }, [userDetails]);
 
  
-    if(userDetails){
-      getProjects(userDetails.intrests);
-    }
-
 
  let curDate = new Date();
  curDate = curDate.getHours();
@@ -46,14 +66,16 @@ if(curDate >=1 && curDate < 12){
       console.log(error.message);
     }
   };
-  console.log(userDetails);
-  if(userDetails){
+  if(userDetails && !loading){
     return (
       <>
-      <div className="d-flex justify-content-between">
-        <h2 className="p-4">{greeting}, {userDetails.name}</h2>
+      <div className="d-flex justify-content-between flex-wrap">
+        <div className='p-4 logo'>
+            <img src={logo} width='30' height='40' alt='React Bootstrap logo' />
+          Teammates
+        </div>
+       
         <div className="p-4 gap-2 ">
-         
           <Button className="proj me-3" onClick={()=>navigate("/hostproject")}>
             Host Project
           </Button>
@@ -62,14 +84,15 @@ if(curDate >=1 && curDate < 12){
           </Button>
         </div>
         </div>
-        <div className="container">
-          {userDetails.intrests.map((intrest) => (  <div className="intrest">{intrest}</div>))}
+        <div className="ms-4 pt-1 greetings">
+          <h2 >{greeting}, <span className="gradient-text">{userDetails.name} </span> </h2>
         </div>
-        {/* <div id="root" className="p-4  mt-3 text-center">
-          Hello Welcome <br />
-          {userData && userData.email}
-        </div> */}
-        
+        <div className="interest-container  d-flex ">
+          {(userDetails.intrests).map((interest) => (<span className="interest-text me-5">{interest}</span>))}
+        </div>
+        <div className="container team-card-container"> 
+          {projects.map((item) =>( <CardComp key={item.id} item={item}/>))}
+        </div>       
       </>
     );
   }

@@ -8,6 +8,7 @@ import Landing from "./components/Landing";
 import ProtectedRoute from "./components/ProtectedRoute";
 import HostProject from "./components/HostProject.js";
 import { UserAuthContextProvider } from "./context/UserAuthContext";
+import Room from "./components/Room";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/hostproject" element={<HostProject />} />
+              <Route path="/room" element={<Room />} />
             </Routes>
           </UserAuthContextProvider>
         </Col>

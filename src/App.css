@@ -192,10 +192,13 @@
   border:2px solid #fe7d35;
 }
 .create {
-  max-width: 800px;
+  width: 35%;
+  padding-inline: 3% !important;
   margin: 0 auto;
   text-align: center;
-  border: 3px solid #fe7d35;
+  /* border: 3px solid #fe7d35; */
+  border-radius: 20px;
+  box-shadow: 0 10px 28px rgba(255, 177, 153, 0.25), 0 10px 10px rgba(255, 180, 151, 0.22);
 }
 .create label {
   text-align: left;
@@ -203,6 +206,13 @@
 }
 .create h2 {
 margin-bottom: 30px;
+font-weight: 700;
+font-style: italic;
+text-transform: uppercase;
+}
+.host-title{
+  font-weight: 900;
+  font-style: italic;
 }
 .create input, .create textarea, .create select {
   width: 100%;
@@ -214,5 +224,175 @@ margin-bottom: 30px;
 }
 .oneline{
   display: flex;
+}
+.hostbody{
+  background-color: #fe8d301c;
+  height: 100vh;
+  width: 100vw;
+  padding: 4%;  
+}
+.greetings{
+    color: rgb(255, 119, 119);
+    font-family: 'Inter';
+    font-style: italic;
 
+}
+.host{
+  color: rgb(255, 119, 119);
+}
+.team-grad{
+  background: linear-gradient(90deg, #ff912c 0%, #f33759 131.35%);
+}
+.team-card-container{
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+.team-card{
+  margin: 10px;
+  border-radius: 15px;
+  border: 2px solid #fda75691;
+  background-color: #fff;
+}
+.team-card-title{
+  color:#131022 !important;
+  font-weight:700;
+}
+.card-btn{
+  border:2px solid #ff8a1daf;
+  background-color: #fe7b35f1;;
+  color:#fff;
+  padding: 6px 20px !important;
+  box-shadow: 0px 5px 15px rgba(254, 123, 53, 0.45);  
+
+}
+.card-btn:hover{
+  color:#fff;
+  background: #fe7d35;
+  box-shadow: 0px 5px 15px rgba(254, 125, 53, 0.8);  
+  border:2px solid #fe7d35;
+}
+.team-badge{
+  font-weight:400;
+  font-style: italic;
+  font-family: 'Inter';
+  color: #fe8930; 
+  padding: 8px 9px;
+  margin-bottom: 4px;
+  border: 1px solid #fe8930;
+}
+.team-badge:hover{
+  background: linear-gradient(90deg, #ff912c 0%, #f33759 131.35%);
+  color: #fff;
+  transition: 0.2s;
+}
+.interest-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content:center;
+}
+.interest-text{
+  font-family: 'Inter';
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  padding: 0 10px;
+  font-weight: 400;
+  color: #131022;
+  
+}
+.interest-text:hover{
+  transition: 0.3s ease-in;
+  border-bottom: 3px solid #fe7d35;
+}
+.chat-box{
+  background-color: rgb(33, 39, 51);
+  padding-inline: 3% !important;
+  height:90% !important;
+  width: 65% !important;
+  overflow-y: auto;
+}
+.head{
+  
+  padding:20px;
+  font-family: 'Inter';
+  font-style: italic;
+  border-bottom: 3px solid #fe7d35;
+  margin-left: 5px;
+   background: linear-gradient(
+    102.28deg,
+    #fe7d35 8.62%,
+    #fe7d35 8.62%,
+    #f33759 47.02%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+.msg {
+  display: flex;
+  padding: 20px 20px 0 20px;
+  margin: 8px;
+  border-radius: 500px;
+  align-items: center;
+  overflow-y: auto;
+
+}
+
+.sent {
+  background: linear-gradient(90deg,#f33759 0%, #ff912c 131.35% );
+  color: white;
+  border-top-right-radius: 100px;
+  flex-direction: row-reverse;
+  padding: 20px 20px 0 20px;
+  text-align: end;
+  float: right;
+}
+
+.received {
+  color: #fff ;
+  float: left;
+  border-style: solid;
+  background: 
+  linear-gradient(rgb(33, 39, 51), rgb(33, 39, 51)) padding-box,
+  linear-gradient(to right, #f33759, #fe8930) border-box;
+border-radius: 50em;
+border-top-left-radius: 100px;
+
+border: 2px solid transparent;
+}
+.sendMsg {
+  position: absolute;
+  bottom: 0;
+}
+
+.msgs {
+  margin: 110px 0;
+  display: flex;
+  flex-direction: column;
+}
+.proj-details{
+  position: absolute;
+  top: 0;
+  z-index: -19;
+     background-color: #181c25;
+     width: 100%;
+     height: 100%;
+
+}
+
+@media only screen and (max-width: 900px) {
+  .team-card-container{
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  
+}
+@media only screen and (max-width: 400px) {
+  .team-card-container{
+    display: grid;
+    padding-left: 20px;
+    padding-right: 20px;
+    grid-template-columns: auto;
+  }
+  
 }
