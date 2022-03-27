@@ -1,6 +1,15 @@
 #  TEAMMATES
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## FEATURES
+1. SEARCH PROJECTS BASED ON YOUR INTRESTS 
+2. VIEW PROJECTS 
+3. HOST PROJECTS PUBLICLY
+4. SECURE AUTHENTICATION
+5. REDIRECT TO GOOGLE MEET FOR BETTER DISCUSSION OF PROJECTS
+6. PROJECT'S PRIVATE CHAT BOX FOR DISCUSSING PROJECTS DETAILS  
+
 ## Available Scripts
 
 In the project directory, you can run:
