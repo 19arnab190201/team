@@ -113,7 +113,9 @@ const Room = () => {
           <h4 className='heading'>Project Virtual Room</h4>
           <button
             className='icon-btn video-call'
-            onClick={() => navigate("/vc")}>
+            onClick={() =>
+              window.open("https://meet.google.com/new", "_blank")
+            }>
             <BsFillCameraVideoFill />
           </button>
         </div>
