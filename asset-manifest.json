@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/team/static/css/main.daa375d3.chunk.css",
+    "main.js": "/team/static/js/main.fa5be3a1.chunk.js",
+    "main.js.map": "/team/static/js/main.fa5be3a1.chunk.js.map",
+    "runtime-main.js": "/team/static/js/runtime-main.2565d222.js",
+    "runtime-main.js.map": "/team/static/js/runtime-main.2565d222.js.map",
+    "static/css/2.f74c14d9.chunk.css": "/team/static/css/2.f74c14d9.chunk.css",
+    "static/js/2.8d82cada.chunk.js": "/team/static/js/2.8d82cada.chunk.js",
+    "static/js/2.8d82cada.chunk.js.map": "/team/static/js/2.8d82cada.chunk.js.map",
+    "index.html": "/team/index.html",
+    "static/css/2.f74c14d9.chunk.css.map": "/team/static/css/2.f74c14d9.chunk.css.map",
+    "static/css/main.daa375d3.chunk.css.map": "/team/static/css/main.daa375d3.chunk.css.map",
+    "static/js/2.8d82cada.chunk.js.LICENSE.txt": "/team/static/js/2.8d82cada.chunk.js.LICENSE.txt",
+    "static/media/blob.2959ac15.svg": "/team/static/media/blob.2959ac15.svg",
+    "static/media/team.70ec8da9.svg": "/team/static/media/team.70ec8da9.svg",
+    "static/media/triangle.93083a1e.svg": "/team/static/media/triangle.93083a1e.svg",
+    "static/media/work.82fe5abd.png": "/team/static/media/work.82fe5abd.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2565d222.js",
+    "static/css/2.f74c14d9.chunk.css",
+    "static/js/2.8d82cada.chunk.js",
+    "static/css/main.daa375d3.chunk.css",
+    "static/js/main.fa5be3a1.chunk.js"
+  ]
+}
