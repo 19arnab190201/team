@@ -1,5 +1,5 @@
 import { Row, Col } from "react-bootstrap";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
 import Home from "./components/Home";
 import Login from "./components/Login";
@@ -29,6 +29,7 @@ function App() {
             <Route path='/signup' element={<Signup />} />
             <Route path='/hostproject' element={<HostProject />} />
             <Route path='/room' element={<Room />} />
+            <Route path='*' element={<Navigate to='/' />} />
           </Routes>
         </UserAuthContextProvider>
       </Col>
