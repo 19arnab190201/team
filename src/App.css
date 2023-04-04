@@ -328,6 +328,7 @@ input[type="file"]::file-selector-button:hover {
   border-radius: 15px;
   border: 2px solid #fda75691;
   background-color: #fff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .team-card-title {
   color: #131022 !important;
@@ -360,6 +361,7 @@ input[type="file"]::file-selector-button:hover {
   padding: 8px 9px;
   margin-bottom: 4px;
   border: 1px solid #fe8930;
+  cursor: pointer;
 }
 .team-badge:hover {
   background: linear-gradient(90deg, #ff912c 0%, #f33759 131.35%);
@@ -376,6 +378,7 @@ input[type="file"]::file-selector-button:hover {
   margin-top: 60px;
   padding-top: 10px;
   padding-bottom: 10px;
+  cursor: pointer;
 }
 .intrests {
   font-family: "Inter";
